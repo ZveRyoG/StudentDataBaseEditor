@@ -29,6 +29,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="minimumSize">
     <size>
      <width>40</width>
@@ -45,11 +48,12 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
    <addaction name="openFile"/>
    <addaction name="saveFile"/>
    <addaction name="addRecord"/>
+   <addaction name="deleteRecord"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -57,7 +61,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -66,8 +70,6 @@
     </property>
     <addaction name="openFile"/>
     <addaction name="saveFile"/>
-    <addaction name="saveFileAs"/>
-    <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
@@ -76,38 +78,55 @@
   <action name="openFile">
    <property name="icon">
     <iconset>
-     <normaloff>../../GMkDocs/images/open.png</normaloff>../../GMkDocs/images/open.png</iconset>
+     <normaloff>icon/open.png</normaloff>icon/open.png</iconset>
    </property>
    <property name="text">
     <string>Открыть</string>
    </property>
   </action>
   <action name="saveFile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../GMkDocs/images/save.png</normaloff>../../GMkDocs/images/save.png</iconset>
+     <normaloff>icon/save.png</normaloff>icon/save.png</iconset>
    </property>
    <property name="text">
     <string>Сохранить</string>
    </property>
   </action>
-  <action name="saveFileAs">
-   <property name="text">
-    <string>Сохранить как</string>
-   </property>
-  </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>icon/exit.png</normaloff>icon/exit.png</iconset>
+   </property>
    <property name="text">
     <string>Выйти</string>
    </property>
   </action>
   <action name="addRecord">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../GMkDocs/images/table.jpg</normaloff>../../GMkDocs/images/table.jpg</iconset>
+     <normaloff>icon/add.png</normaloff>icon/add.png</iconset>
    </property>
    <property name="text">
     <string>Добавить запись</string>
+   </property>
+  </action>
+  <action name="deleteRecord">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icon/Editing Delete.png</normaloff>icon/Editing Delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
    </property>
   </action>
  </widget>
